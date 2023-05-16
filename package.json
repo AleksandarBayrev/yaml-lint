@@ -1,0 +1,27 @@
+{
+  "name": "yaml-lint",
+  "version": "1.0.0",
+  "description": "Easy tool for linting YAML files.",
+  "main": "yaml-lint.js",
+  "scripts": {
+    "build": "npm run compile && webpack --mode=production --node-env=production",
+    "build:dev": "npm run compile && webpack --mode=development",
+    "build:prod": "npm run compile && webpack --mode=production --node-env=production",
+    "watch": "npm run compile && webpack --watch",
+    "compile": "npm run clean && tsc",
+    "clean": "shx rm -rf ./build && shx rm -rf ./dist"
+  },
+  "author": "Aleksandar Bayrev <aleksandarbayrev@gmail.com>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/typescript": "^2.0.0",
+    "@webpack-cli/generators": "^3.0.4",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "shx": "^0.3.4"
+  },
+  "dependencies": {
+    "yaml-lint": "^1.7.0"
+  }
+}
