@@ -15,6 +15,6 @@ setTimeout(async () => {
         await lint(fs.readFileSync(filePath).toString());
         console.log(`YAML valid!`);
     } catch(err: any) {
-        console.log('YAML invalid!', err.message);
+        console.log('YAML invalid! Error:', err.message);
     }
 });
